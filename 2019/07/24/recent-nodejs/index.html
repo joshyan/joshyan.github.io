@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>浅谈最近做的几个js项目 | YH&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近做了一些js项目，都用到了node.js，完全革新了自己对JavaScript的认识，对web开发也有了新的理解。  使用场景一：Laravel页面中嵌套reactlaravel mix + react + ag-grid laravel-mix提供了简易的webpack打包方式，不需要自己安装和配置babel，一步到位。  Mix can automatically install the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈最近做的几个js项目">
+<meta property="og:url" content="http://yoursite.com/2019/07/24/recent-nodejs/index.html">
+<meta property="og:site_name" content="YH&#39;s Blog">
+<meta property="og:description" content="最近做了一些js项目，都用到了node.js，完全革新了自己对JavaScript的认识，对web开发也有了新的理解。  使用场景一：Laravel页面中嵌套reactlaravel mix + react + ag-grid laravel-mix提供了简易的webpack打包方式，不需要自己安装和配置babel，一步到位。  Mix can automatically install the">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-24T18:16:04.010Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浅谈最近做的几个js项目">
+<meta name="twitter:description" content="最近做了一些js项目，都用到了node.js，完全革新了自己对JavaScript的认识，对web开发也有了新的理解。  使用场景一：Laravel页面中嵌套reactlaravel mix + react + ag-grid laravel-mix提供了简易的webpack打包方式，不需要自己安装和配置babel，一步到位。  Mix can automatically install the">
+  
+    <link rel="alternate" href="/atom.xml" title="YH&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YH&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-recent-nodejs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/24/recent-nodejs/" class="article-date">
+  <time datetime="2019-07-24T14:32:00.000Z" itemprop="datePublished">2019-07-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      浅谈最近做的几个js项目
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近做了一些js项目，都用到了node.js，完全革新了自己对JavaScript的认识，对web开发也有了新的理解。</p>
+<hr>
+<h2 id="使用场景一：Laravel页面中嵌套react"><a href="#使用场景一：Laravel页面中嵌套react" class="headerlink" title="使用场景一：Laravel页面中嵌套react"></a>使用场景一：Laravel页面中嵌套react</h2><p>laravel mix + react + ag-grid</p>
+<p>laravel-mix提供了简易的webpack打包方式，不需要自己安装和配置babel，一步到位。</p>
+<blockquote>
+<p>Mix can automatically install the Babel plug-ins necessary for React support. Behind the scenes, Mix will download and include the appropriate babel-preset-react Babel plug-in.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mix.react(&apos;resources/js/app.jsx&apos;, &apos;public/js&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>ag-grid是一个强大的grid生成工具，支持react</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; AgGridReact &#125; <span class="keyword">from</span> <span class="string">'ag-grid-react'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>总体上来说在Laraval网站里面嵌入react或者vue是相对简单的。</p>
+<hr>
+<h2 id="使用场景二：单页面html-react应用"><a href="#使用场景二：单页面html-react应用" class="headerlink" title="使用场景二：单页面html+react应用"></a>使用场景二：单页面html+react应用</h2><p>react + webpack + babel</p>
+<p>使用webpack生成js文件，直接在html页面加载js，css</p>
+<p>需要使用babel来编译：</p>
+<ol>
+<li>babel preset env for compiling Javascript ES6 code down to ES5 (please note that babel-preset-es2015 is now deprecated)</li>
+<li>babel preset react for compiling JSX and other stuff down to Javascript</li>
+</ol>
+<p>安装babel相关插件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>不要忘了添加babel配置文件.babelrc</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;presets&quot;: [&quot;@babel/preset-env&quot;, &quot;@babel/preset-react&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用babel-loader来加载：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.(js|jsx)$/</span>,</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">        use: &#123;</span><br><span class="line">          loader: <span class="string">"babel-loader"</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>参考教程：<a href="https://www.valentinog.com/blog/babel/" target="_blank" rel="noopener">https://www.valentinog.com/blog/babel/</a></p>
+<hr>
+<h2 id="使用场景三：全栈JavaScript应用（仓库管理系统）"><a href="#使用场景三：全栈JavaScript应用（仓库管理系统）" class="headerlink" title="使用场景三：全栈JavaScript应用（仓库管理系统）"></a>使用场景三：全栈JavaScript应用（仓库管理系统）</h2><p>react-admin + loopback 3</p>
+<p>react-admin支持多种数据包, 这个项目里面用到的是react-admin-loopback插件，需要在response header添加Content-Range字段，使用loopback-content-range插件</p>
+<p>react-admin支持多种语言包，可以方便的设置各种版本的语言</p>
+<p>该系统使用REST api接口，前端后端统一使用JavaScript，中间使用api来通信，这样做的好处是数据和显示的有效隔离，方便之后的页面重新设计和数据扩展。缺点是逻辑层较为模糊，没有MVC架构来的清晰。</p>
+<hr>
+<h2 id="使用场景四：Electron桌面应用"><a href="#使用场景四：Electron桌面应用" class="headerlink" title="使用场景四：Electron桌面应用"></a>使用场景四：Electron桌面应用</h2><p>Electron + puppeteer</p>
+<p>使用Electron桌面app来取代js脚本程序</p>
+<p>Electron的autoUpdater有两套实现方案，官方的Squirrel方案和electron-builder的electron-updater方案</p>
+<p>最终我选择的是electron-updater方案，它有多个好处，此处参考: <a href="https://hackernoon.com/electron-the-bad-parts-2b710c491547" target="_blank" rel="noopener">https://hackernoon.com/electron-the-bad-parts-2b710c491547</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/24/recent-nodejs/" data-id="cjyhkggof0000gkuf2xrkyng2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/24/recent-nodejs/">浅谈最近做的几个js项目</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Josh Yan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
